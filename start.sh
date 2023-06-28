@@ -26,6 +26,8 @@ if [ ! -z "$REPL_ID" ]; then
   echo -e "Running on Repl.it... \nPatching Whitelist..."
   sed -i 's|whitelistMode = true|whitelistMode = false|g' "config.conf"
 fi
+./start.sh
+
 
 echo "Installing Node Modules..."
 npm i --no-audit
